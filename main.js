@@ -7,29 +7,6 @@
   'use strict';
 
   /**
-   * Mobile navigation toggle
-   */
-  function initNavToggle() {
-    var toggle = document.querySelector('.nav-toggle');
-    var navLinks = document.querySelector('.nav-links');
-
-    if (!toggle || !navLinks) return;
-
-    toggle.addEventListener('click', function () {
-      var isOpen = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navLinks.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
-
-  /**
    * Intersection Observer for fade-in animations.
    * Elements with the class "fade-in" will animate
    * into view when they enter the viewport.
@@ -69,8 +46,6 @@
    * after DOM is ready.
    */
   function setup() {
-    initNavToggle();
-
     var selectors = [
       '.about-content',
       '.work-card',

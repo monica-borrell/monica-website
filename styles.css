@@ -127,14 +127,8 @@ a:focus {
   text-decoration: none;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: var(--space-md);
-  align-items: center;
-}
-
-.nav-links a {
+/* Single Blog link in the nav */
+.nav-blog-link {
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 400;
@@ -145,36 +139,16 @@ a:focus {
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
+.nav-blog-link:hover,
+.nav-blog-link:focus {
   color: var(--color-deep-brown);
   text-decoration: none;
   border-bottom-color: var(--color-terracotta);
 }
 
-.nav-links a.active {
+.nav-blog-link.active {
   color: var(--color-deep-brown);
   border-bottom-color: var(--color-terracotta);
-}
-
-/* Hamburger toggle (mobile) */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.nav-toggle-bar {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: var(--color-deep-brown);
-  border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* ---------- HERO SECTION ---------- */
@@ -582,37 +556,6 @@ a:focus {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 600px) {
-  /* Nav: hamburger menu */
-  .nav-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--color-warm-white);
-    border-bottom: 1px solid var(--color-sand);
-    padding: var(--space-sm) var(--space-md);
-    gap: var(--space-xs);
-    box-shadow: 0 4px 12px rgba(59, 47, 47, 0.08);
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .site-nav {
-    position: sticky;
-  }
-
-  .nav-container {
-    position: relative;
-  }
-
   .hero-text h1 {
     font-size: 2.2rem;
   }
