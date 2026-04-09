@@ -15,7 +15,7 @@ A warm, approachable single-page personal brand website for Monica Borrell.
 
 ## Photo
 
-Replace `images/monica-photo.jpg` with your professional headshot. The image is displayed as a circle (220x220px), so a square photo works best.
+The hero photo is at `images/monica-photo.jpg`. It's displayed as a large rounded rectangle. To swap the photo, just replace this file — a landscape or portrait image works well.
 
 ## Deploy
 
