@@ -1,10 +1,33 @@
 /* ============================================
    MONICA BORRELL — Minimal JavaScript
-   Handles subtle entrance animations on scroll
+   Handles nav toggle + subtle entrance animations
    ============================================ */
 
 (function () {
   'use strict';
+
+  /**
+   * Mobile navigation toggle
+   */
+  function initNavToggle() {
+    var toggle = document.querySelector('.nav-toggle');
+    var navLinks = document.querySelector('.nav-links');
+
+    if (!toggle || !navLinks) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   /**
    * Intersection Observer for fade-in animations.
@@ -45,11 +68,15 @@
    * Add fade-in class to animatable elements
    * after DOM is ready.
    */
-  function setupAnimations() {
+  function setup() {
+    initNavToggle();
+
     var selectors = [
       '.about-content',
       '.work-card',
-      '.contact-links'
+      '.contact-links',
+      '.blog-card',
+      '.post-body'
     ];
 
     selectors.forEach(function (selector) {
@@ -64,8 +91,8 @@
 
   // Kick off when DOM is ready
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupAnimations);
+    document.addEventListener('DOMContentLoaded', setup);
   } else {
-    setupAnimations();
+    setup();
   }
 })();

@@ -19,9 +19,3 @@
   for = "/*.js"
   [headers.values]
     Cache-Control = "public, max-age=86400"
-
-# SPA-style redirect: serve index.html for any path
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
