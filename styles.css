@@ -477,6 +477,12 @@ a:focus {
   list-style-type: circle;
 }
 
+.post-body ol {
+  margin-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  list-style-type: decimal;
+}
+
 .post-body li {
   font-size: 1.05rem;
   line-height: 1.85;
