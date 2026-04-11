@@ -284,6 +284,11 @@ a:focus {
   margin-bottom: var(--space-lg);
 }
 
+.kit-form-wrapper {
+  max-width: 480px;
+  margin: 0 auto var(--space-lg);
+}
+
 .contact-links {
   display: flex;
   flex-direction: column;
@@ -305,11 +310,6 @@ a:focus {
 .contact-link:focus {
   text-decoration: none;
   background-color: var(--color-blush);
-}
-
-.email-link {
-  color: var(--color-deep-brown);
-  font-weight: 400;
 }
 
 .linkedin-link {
