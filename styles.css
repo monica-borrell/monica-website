@@ -443,11 +443,13 @@ a:focus {
   line-height: 1.25;
 }
 
-/* Post body typography */
+/* Post body typography — matches monicaborrell.com spacing */
 .post-body h2 {
-  font-size: 1.5rem;
-  margin-top: var(--space-lg);
-  margin-bottom: var(--space-sm);
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-sand);
 }
 
 .post-body h2::after {
@@ -457,37 +459,49 @@ a:focus {
 
 .post-body p {
   font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: var(--space-sm);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
   color: var(--color-deep-brown);
 }
 
 .post-body ul {
-  margin-bottom: var(--space-sm);
-  padding-left: var(--space-md);
+  margin-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  list-style-type: disc;
+}
+
+.post-body ul ul {
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style-type: circle;
 }
 
 .post-body li {
   font-size: 1.05rem;
-  line-height: 1.8;
-  margin-bottom: var(--space-xs);
+  line-height: 1.85;
+  margin-bottom: 0.6rem;
   color: var(--color-deep-brown);
 }
 
 .post-body blockquote {
-  margin: var(--space-md) 0;
-  padding: var(--space-md);
-  background-color: var(--color-cream);
-  border-left: 4px solid var(--color-terracotta);
-  border-radius: 0 8px 8px 0;
+  margin: 2.5rem 0;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--color-sand);
+  border-bottom: 1px solid var(--color-sand);
+  border-left: none;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: center;
 }
 
 .post-body blockquote p {
   font-family: var(--font-heading);
   font-style: italic;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   color: var(--color-deep-brown);
-  margin-bottom: var(--space-xs);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
 }
 
 .post-body blockquote p:last-child {
@@ -500,11 +514,11 @@ a:focus {
   font-style: normal;
   font-size: 0.9rem;
   color: var(--color-soft-brown);
-  margin-top: var(--space-xs);
+  margin-top: 0.75rem;
 }
 
 .post-body strong {
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-deep-brown);
 }
 

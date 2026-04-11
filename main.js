@@ -50,8 +50,7 @@
       '.about-content',
       '.work-card',
       '.contact-links',
-      '.blog-card',
-      '.post-body'
+      '.blog-card'
     ];
 
     selectors.forEach(function (selector) {
